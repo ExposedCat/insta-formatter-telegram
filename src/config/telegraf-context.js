@@ -1,36 +1,17 @@
 import Telegraf from 'telegraf'
 
-import { showPopup } from '../helpers/show-popup.js'
 import { sendMessage } from '../helpers/send-message.js'
 
-
 class ExtendedContext extends Telegraf.Context {
-    constructor(update, telegram, options) {
-        super(update, telegram, options)
-    }
+	constructor(update, telegram, options) {
+		super(update, telegram, options)
+	}
 
-    popup = showPopup
+	text = sendMessage
 
-    text = sendMessage
-
-    async getSelfEntities() {
-        const user = await this.db.User.getOne(
-            this.from.id,
-            this.from.first_name
-        )
-        let group = null
-        if (this.from.id !== this.chat.id) {
-            group = await this.db.Group.getOne(this.group.id, title)
-        }
-
-        return {
-            user,
-            group
-        }
-    }
+	t(label, data = {}) {
+		return this.i18n.t(label, data)
+	}
 }
 
-
-export {
-    ExtendedContext
-}
+export { ExtendedContext }
