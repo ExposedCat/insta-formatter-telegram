@@ -1,0 +1,5 @@
+{
+    "greeting": "👋🏼 Hello!\nThis is an image processor for Instagram\nTo format photo, just send the original uncompressed (as a file) here\n\n<a href='https://github.com/ExposedCat/insta-formatter-telegram'>👨‍💻 Source code</a>\n<a href='https://github.com/ExposedCat/insta-formatter'>⚙️ API source code</a>\n\n🐱 Created by @ExposedCatDev",
+    "unknownError": "😵‍💫 Unknown internal error, please report developers:\n<code>${error}</code>",
+    "sendUncompressed": "📁 Please re-send the photo <u>uncompressed</u> (as a file)"
+}

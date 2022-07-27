@@ -1,7 +1,7 @@
 {
-    "name": "telegram-bot",
+    "name": "insta-formatter-tg",
     "version": "1.0.0",
-    "description": "Telegram bot",
+    "description": "Instagram posts aspect ratio formatter",
     "main": "src/app.js",
     "scripts": {
         "start": "clear && node src/app.js"
@@ -14,8 +14,8 @@
     "author": "ExposedCat",
     "license": "GPL-3.0-or-later",
     "dependencies": {
+        "axios": "^0.27.2",
         "dotenv": "^15.0.0",
-        "mongoose": "^6.0.8",
         "telegraf": "3.39",
         "telegraf-i18n": "^6.6.0"
     },

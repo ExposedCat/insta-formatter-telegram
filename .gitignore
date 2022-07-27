@@ -1,2 +1,8 @@
+# Dependencies
 node_modules
-src/config.env
+
+# Sensitive data
+config.env
+
+# Data
+files
