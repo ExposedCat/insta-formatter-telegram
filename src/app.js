@@ -1,21 +1,14 @@
-import { path } from './helpers/path-resolver.js'
 import { config as setConfigFile } from 'dotenv'
 
-import { initDatabaseConnection } from './config/database/database.js'
 import { initBot } from './config/bot.js'
-
+import { path } from './helpers/path-resolver.js'
 
 setConfigFile({
-    path: path(import.meta.url, 'config.env')
+	path: path(import.meta.url, '../config.env')
 })
 
-let db = initDatabaseConnection()
-const bot = await initBot(db)
-db = null
+const bot = await initBot()
 
 bot.launch()
-
-await bot.context.db.User.deleteMany()
-await bot.context.db.Group.deleteMany()
 
 console.info('App started')
